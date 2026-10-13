@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aptevalkit"
+version = "0.1.1"
+description = "Leakage-aware, repeated-run evaluation protocol for flow-based APT detectors"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+stats = ["scipy"]
+test = ["pytest", "scipy"]
+
+[project.scripts]
+aptevalkit = "aptevalkit.cli:main"
+
+[tool.setuptools]
+packages = ["aptevalkit"]
